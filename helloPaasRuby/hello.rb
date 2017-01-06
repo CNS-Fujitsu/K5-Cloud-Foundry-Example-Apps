@@ -2,7 +2,7 @@
 # hello.rb
 require 'sinatra'
 get '/' do
-  "hello world"
+  "Hello, welcome to Fujitsu PaaS!"
 end
 
 
