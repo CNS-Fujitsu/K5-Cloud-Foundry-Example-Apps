@@ -1,0 +1,3 @@
+applications:
+- buildpack: staticfile_buildpack
+  memory: 256M

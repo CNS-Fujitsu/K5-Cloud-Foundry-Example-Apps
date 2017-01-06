@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Filebrowser</title>
+<link rel="stylesheet" href="../../css/core.css" type="text/css" />
+<style>body {padding: 0; margin: 0; overflow: auto;}</style>
+
+        %SCRIPT%
+
+<script type="text/javascript" src="./js/filebrowser.js"></script>
+</head>
+
+<body>
+<!--utf-8 marker: äöü -->
+
+<?php 
+@session_start();
+
+include('../../cmsimple/languages/' . $_SESSION['fb_sl'] . '.php');
+
+if(@$_POST['fb_viewSelect'])
+{
+	$_SESSION['fb_view'] = $_POST['fb_viewSelect'];
+}
+echo '<form method="post" action="#">
+<select name="fb_viewSelect" style="float: right; width: 160px; border: 2px solid #c60; padding: 2px; margin: 6px 3px 0 0;" onchange="this.form.submit()" />
+<option value="list" style="padding: 0 6px;"';
+if(@$_SESSION['fb_view'] == 'list')
+{
+	echo ' selected="selected"';
+}
+echo '>' . $tx['filebrowser']['view_list'] . '</option>
+<option value="miniatur" style="padding: 0 6px;"';
+if((@$_SESSION['fb_view'] == 'miniatur' || !isset($_SESSION['fb_view'])))
+{
+	echo ' selected="selected"';
+}
+ echo '>' . $tx['filebrowser']['view_thumbs'] . '</option>
+</select>
+<noscript><input type="submit" value="Submit" /></noscript>
+</form>
+<div style="clear: both;"></div>';
+?>
+
+
+<div id="CMSimpleFileBrowserMenu">
+<p>
+<?php echo $tx['filetype']['folder'] . ': &nbsp; <span style="white-space: nowrap; color: #c00; font-family: courier new, monospace; font-size: 16px;">' . $_SERVER['SERVER_NAME'] . str_replace($_SESSION['subsite_folder_link'],'',$_SESSION['fb_sn']) . '</span> <span style="white-space: nowrap; font-family: courier new, monospace; font-size: 16px;">' . str_replace($_SESSION['subsite_folder'],'',$this->currentDirectory) . '</span>'; ?>
+</p>
+
+<a href="#" onClick="window.showxhfbForm('xhfbCreateDir');" /><?php echo $this->translate('create_folder'); ?></a> | 
+<a href="#" onClick="window.showxhfbForm('xhfbUploadFile');" /><?php echo $this->translate('upload_file'); ?></a>
+<fieldset id="xhfbUploadFile" class="xhfbform">
+<legend><?php echo $this->translate('upload_file_to', $this->currentDirectory); ?> <a href="#" onClick="window.closexhfbForm('xhfbUploadFile');">[x]</a></legend>
+	<div style="padding: 20px 30px;">
+	<form method="POST" action="" enctype="multipart/form-data">
+	<input type="file" name="fbupload" />
+	<input type="hidden" name="upload" value="upload" />
+	<input type="submit" class="submit" value="<?php echo $this->translate('upload_file'); ?>" />
+	</form>
+	</div>
+</fieldset>
+<fieldset id="xhfbCreateDir" class="xhfbform">
+<legend><?php echo $this->translate('create_subfolder_in', $this->currentDirectory); ?> <a href="#" onClick="window.closexhfbForm('xhfbCreateDir');">[x]</a></legend>
+	<div style="padding: 20px 30px;">
+	<form method="POST" action="">
+	<input type="text" name="createFolder" size="30" />
+	<input type="submit" class="submit" value="<?php echo $this->translate('create_folder'); ?>" />
+	</form>
+	</div>
+</fieldset>
+</div>
+
+<div id="CMSimpleFileBrowser">
+<table style="width: 100%;">
+<tr>
+<td style="width: 20%; min-width: 320px; vertical-align: top;">
+	<div id="folders" style="width: 100%; overflow: auto;">
+	%FOLDERS%
+	</div>
+</td>
+
+<td style="vertical-align: top;">
+	<div id="files" style="overflow: auto; z-index: 3; font-weight: 300; padding: 6px 6px 100px 30px;">
+	<span class="xhfb_files"><?php echo $this->translate('files');?></span><br /><br />
+	%MESSAGE%
+	%FILES%
+	</div>
+</td>
+</tr>
+</table>
+<div style="clear:both;"></div>
+</div>
+</body>
+</html>

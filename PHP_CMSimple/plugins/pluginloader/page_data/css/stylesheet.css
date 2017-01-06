@@ -1,0 +1,52 @@
+#pd_tabs {
+font-weight: normal;
+margin-top: 10px;
+color: #000;
+}
+
+#pd_tabs a {
+border: 1px solid #9ab;
+border-radius: 5px 5px 0 0;
+padding:4px 6px 1px 6px;
+background: #c6c9cc;
+}
+
+#pd_tabs a:hover {
+border: 1px solid #c60;
+background: #c60;
+color: #fff;
+cursor: pointer;
+}
+
+#pd_tabs a.active_tab {
+border: 1px solid #345;
+padding:4px 6px 1px 6px;
+background: #345;
+color: #fff;
+}
+
+#pd_views {
+background:#fff;
+}
+
+#pd_views a#pd_editor_toggle {
+width: 20px;
+height: 20px;
+float: right;
+background:url(cross.gif) no-repeat top right;
+cursor: pointer;
+}
+
+#pd_views .active_view {
+	display: block;
+	padding: 1.5ex 3ex;
+	border: 1px solid #808080;
+}
+
+#pd_views .inactive_view {
+	display: none;
+	display: block;
+	padding: 1.5ex 3ex;
+	border: 1px solid #808080;
+	display: none;
+}

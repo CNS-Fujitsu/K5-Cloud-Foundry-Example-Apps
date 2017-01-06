@@ -1,0 +1,6 @@
+{
+	"name":"NodejsStart",
+	"version":"0.0.1",
+	"dependencies": { "cfenv": "1.0.x"},
+	"engines": { "node": "~0.10.0" }
+}
