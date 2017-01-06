@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<?php echo head();?>
+</head>
+
+<body id="body" <?php echo onload();?>>
+<!-- utf-8 check: äöüß -->
+<div id="top"></div>
+
+
+<!-- ANFANG MAIN / BEGIN MAIN -->
+
+<table id="tplge_main">
+<tr>
+<td id="tplge_main_nav">
+
+
+<!-- LINKE SIDEBAR / SIDEBAR LEFT -->
+
+	<div id="tplge_sidebar1">
+	<div id="tplge_sidebar1in">
+
+<?php echo toc();?>
+<ul class="subnav">
+<li><?php echo printlink();?></li>
+<li><?php echo sitemaplink();?></li>
+<li><?php echo mailformlink();?></li>
+</ul>
+<div style="clear: both;"></div>
+	</div>
+<div style="clear: both;"></div>
+	</div>
+
+</td>
+<td id="tplge_main_cont">
+
+<!-- INHALT / CONTENT -->
+
+	<div id="tplge_content">
+	<div id="tplge_contentin">
+	<div style="text-align: right;"><?php echo languagemenu();?></div>
+<?php echo editmenu();?>
+<?php echo content();?>
+<?php echo submenu();?>
+
+		<div id="tplge_footer">
+		<div id="tplge_footerin">
+<?php echo previouspage();?>  |  
+<?php echo top();?>  |  
+<?php echo nextpage();?>
+<div style="clear: both;"></div>
+		</div>
+<div style="clear: both;"></div>
+		</div>
+<div style="clear: both;"></div>
+
+	</div>
+<div style="clear: both;"></div>
+	</div>
+<div style="clear: both;"></div>
+
+
+<!-- ENDE MAIN / END MAIN --> 
+
+</td>
+</tr>
+</table>
+
+
+<!-- FUSSLINKS / FOOTER LINKS -->
+
+<div id="tplge_notes">
+<div id="tplge_notesin">
+<p>
+Powered by <a href="http://www.cmsimple.org/">CMSimple</a> | 
+Template by <a href="http://cmsimple.org/">CMSimple</a> | 
+
+<?php 
+if($adm && !$edit)
+{
+echo '<a href="http://validator.w3.org/check?uri=referer">html5</a> | 
+<a href="http://jigsaw.w3.org/css-validator/check/referer">css</a> | ';
+}
+?>
+
+<?php echo loginlink();?></p>
+
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<?php if(!empty($bjs) && $file == 'template'){echo $bjs;} ?>
+
+</body>
+</html>

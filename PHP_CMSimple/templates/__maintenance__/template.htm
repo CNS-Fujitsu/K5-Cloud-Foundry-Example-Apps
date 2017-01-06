@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<?php echo head();?>
+</head>
+<!-- utf-8 marker: äöü -->
+<body <?php echo onload();?>>
+
+<div id="content">
+<?php 
+if(!stristr($_SERVER['QUERY_STRING'], 'login'))
+{
+echo '<div class="cmsimplecore_maintenance">' . "\n" . $tx['message']['maintenance'] . "\n" . '</div>';
+}
+
+if(stristr($_SERVER['QUERY_STRING'], 'login'))
+{
+echo content();
+}
+?> 
+</div>
+
+<p style="text-align: center"><?php if(!stristr($_SERVER['QUERY_STRING'], 'login')){echo loginlink();}?></p>
+
+</body>
+</html>

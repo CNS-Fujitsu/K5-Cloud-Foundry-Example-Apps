@@ -1,0 +1,3 @@
+applications:
+- memory: 512M
+  path: HelloPaasJava.war

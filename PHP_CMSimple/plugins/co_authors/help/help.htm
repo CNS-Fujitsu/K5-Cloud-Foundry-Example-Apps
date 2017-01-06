@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>CoAuthors Kurzdoku</title>
+<meta name="content-language" content="de">
+<style type="text/css">
+body {font-family: arial, sans-serif; line-height: 1.4em;}
+div#main {Width: 900px; padding: 24px; margin: 0 auto;}
+h1, h2 {color: #720; margin-top: 90px;}
+h3, h4 {margin-top: 60px;}
+p.code {font-family: Courier New; border: 1px solid #999; background: #eed; padding: 8px 12px;}
+span.code {font-family: Courier New; color: #620;}
+td {border: 1px solid; padding: 8px 12px;}
+li {padding-top: 5px; padding-bottom: 5px;}
+a:link, a:visited {color: #249;}
+a:hover {color: #c60;}
+</style>
+</head>
+
+<body>
+<!-- utf-8 check: äöüß -->
+
+<div id="main">
+<p style="font-size: 24px;"><a href="http://translate.google.de/" target="_blank">Google translator &raquo;</a></p>
+<p>(Opens in a new window - öffnet in einem neuen Fenster)</p><hr>
+<h1>Kurz-Dokumentation Plugin "CoAuthors"</h1>
+<p><b><i>Version CoAuthors 2.0</i></b> - released 05/2016</p>
+<p><b>CoAuthors</b> ist ein CMSimple Plugin, mit dem txt-Dateien, die html Quelltext enthalten und die irgendwo in einem Unterverzeichnis einer CMSimple Installation liegen, in eine Seite dieser CMSimple Installation eingebunden werden können.</p>
+<p>Der Plugin Aufruf für CMSimplCoAuthors (4.1) entfernt alle h1 Überschriften aus dem Quelltext.</p>
+<div style="background: #f3f6f9; border: 3px solid #c60; text-align: center; padding: 0 24px;">
+<p>Mit dem CMS auf der Basis von CMSimple</p>
+</p><a href="http://www.ge-webdesign.de/co_authors/"><b>CMSimpleCoAuthors &raquo;</b></a></p>
+können Sie diese txt-Dateien einfach und komfortabel<br>in Ihrer gewohnten Arbeitsumgebung erzeugen.</p>
+</div>
+
+
+
+
+
+<h2>1. Systemvoraussetzungen</h2>
+<p>Voraussetzung ist eine funktionierende Installation von CMSimple 4.0 oder höher.</p>
+<hr>
+
+
+
+
+
+<h2>2. Installation</h2>
+<ol>
+	<li>zip-Datei herunterladen und mit einem geeigneten Programm entpacken</li>
+	<li>Laden Sie den Ordner "co_authors" in das Verzeichnis "plugins" Ihrer CMSimple Installation hoch.</li>
+</ol>
+<hr>
+
+
+
+
+
+<h2>3. Datei- und Ordnerrechte</h2>
+<p>Die Vergabe von Schreibrechten für Ordner und Dateien ist nicht notwendig.</p>
+<hr>
+
+
+
+
+
+<h2>4. Plugin-Aufruf</h2>
+
+
+
+<h3>4.1 Plugin-Aufruf für CMSimpleCoAuthors</h3>
+
+<p>Fügen Sie folgenden Plugin-Aufruf in Ihre CMSimple Seite ein, an der Stelle, an der die txt-Datei eingebunden werden soll:</p>
+
+<p class="code">{{{plugin:co_authors('CoAuthorFolder/','Die_Autoren_Seite');}}}</p>
+
+<p><span style="color: rgb(128, 0, 0); font-weight: 700;">Hinweis: Bitte fügen Sie den Plugin Aufruf immer in der Quelltext Ansicht ein.</span></p>
+
+<p><b>CoAuthorFolder:</b> Das Verzeichnis, in dem CMSimpleCoAuthors - also die Autoren Installation - installiert ist.</p>
+<p><span style="color: rgb(128, 0, 0); font-weight: 700;">!!! WICHTIG !!!</span> der Slash ("/") am Ende, ohne den funktioniert's nicht.</p>
+
+<p><b>Die_Autoren_Seite:</b> Der Name der Seite der Autoren Installation, die eingebunden werden soll, mit "_" für die Leerstellen.</p>
+<p><span style="color: rgb(128, 0, 0); font-weight: 700;">!!! WICHTIG !!!</span> Bitte bei den Namen der Autorenseiten keine Umlaute oder Sonderzeichen verwenden, da daraus Dateinamen gemacht werden, die an CMSimple übergeben werden.</p>
+
+
+
+<h3>4.2 Plugin-Aufruf mit vollem URL</h3>
+
+<p>Fügen Sie folgenden Plugin-Aufruf in Ihre CMSimple Seite ein, an der Stelle, an der die txt-Datei eingebunden werden soll:</p>
+<p class="code">{{{plugin:co_authorsURL('Datei mit vollem URL');}}}</p>
+
+<p><span style="color: rgb(128, 0, 0); font-weight: 700;">Hinweis: Bitte fügen Sie den Plugin Aufruf immer in der Quelltext Ansicht ein.</span></p>
+
+<p><b>Beispiel - Example:</b></p>
+<p class="code">{{{plugin:co_authorsURL('./userfiles/texte/text01.txt');}}}</p>
+
+
+
+
+
+<h2>5. Konfiguration</h2>
+<p>Für <b>CoAuthors</b> gibt es keine Konfigurations Optionen.</p>
+</div>
+</body>
+</html>

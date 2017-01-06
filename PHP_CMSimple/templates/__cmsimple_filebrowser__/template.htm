@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<?php echo head();?>
+</head>
+
+<body id="body" <?php echo onload();?>>
+<!-- utf-8 check: äöüß -->
+<div id="top"></div>
+
+
+<!-- ANFANG MAIN / BEGIN MAIN -->
+
+<div class="backend_container">
+<p class="fb_backlink"><a href="./?<?php echo $u[0]; ?>&amp;normal">CMSimple &raquo;</a></p>
+
+
+<!-- INHALT / CONTENT -->
+
+	<div id="tplge_content">
+	<div id="tplge_contentin">
+<?php echo editmenu();?>
+<?php echo content();?>
+<?php echo submenu();?>
+
+		<div id="tplge_footer">
+		<div id="tplge_footerin">
+<?php echo previouspage();?>  |  
+<?php echo top();?>  |  
+<?php echo nextpage();?>
+<div style="clear: both;"></div>
+		</div>
+<div style="clear: both;"></div>
+		</div>
+<div style="clear: both;"></div>
+
+	</div>
+<div style="clear: both;"></div>
+	</div>
+<div style="clear: both;"></div>
+
+
+<!-- FUSSLINKS / FOOTER LINKS -->
+
+<div id="tplge_notes">
+<div id="tplge_notesin">
+<p>
+Powered by <a href="http://www.cmsimple.org/">CMSimple</a> | 
+Template by <a href="http://cmsimple.org/">CMSimple</a> | 
+
+<?php 
+if($adm && !$edit)
+{
+echo '<a href="http://validator.w3.org/check?uri=referer">html5</a> | 
+<a href="http://jigsaw.w3.org/css-validator/check/referer">css</a> | ';
+}
+?>
+
+<?php echo loginlink();?></p>
+
+<div style="clear: both;"></div>
+</div>
+</div>
+
+</div>
+<?php if(!empty($bjs) && $file == 'template'){echo $bjs;} ?>
+
+</body>
+</html>

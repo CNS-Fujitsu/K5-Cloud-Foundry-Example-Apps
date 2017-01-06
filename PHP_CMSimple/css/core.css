@@ -1,0 +1,1069 @@
+/* ADMINMENU */
+
+#adminmenu {
+width: 100%;
+min-width: 760px;
+background-color: #2e3436;
+font-size: 14px;
+padding: 0;
+margin: 0;
+overflow: visible;
+border-bottom: 1px solid #aaa;
+color: #d3d7cf;
+}
+
+#adminmenu ul {
+height: 36px;
+list-style-type: none !important;
+list-style-image: none;
+font-family: arial, sans-serif;
+font-style: normal;
+margin: 0;
+padding: 0;
+background-color: #2e3436;
+}
+
+#adminmenu li {
+list-style-type: none !important;
+float: left;
+position: relative;
+width: 125px;
+background-color: #2e3436;
+text-align: center;
+color: #d3d7cf;
+padding: 8px 0 0 0;
+margin: 0;
+}
+
+#adminmenu li a:hover, #adminmenu li:hover {
+background-color: #3f4446;
+}
+
+#adminmenu  a, #adminmenu a:visited {
+display: block;
+color: #d3d7cf;
+height: 26px;
+padding: 2px 6px 0px 6px;
+text-decoration: none;
+font-style: normal;
+}
+
+#adminmenu ul ul {
+list-style-type: none !important;
+height: 0;
+left: 0;
+position: absolute;
+top: 36px; 
+margin: 0;
+z-index: 9999;
+visibility: hidden;
+}
+
+#adminmenu ul ul li {
+background: #4f5456;
+height: 26px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu ul ul li a {
+height: 16px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu ul ul li:hover {
+height: 26px;
+padding: 3px 0 0 0;
+background: #c50;
+}
+
+#adminmenu ul ul li a:hover {
+background: #c50;
+height: 20px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu ul ul ul {
+left: 100%;
+top: 0px; 
+visibility: hidden;
+padding: 0;
+margin: 0;
+}
+
+#adminmenu ul ul ul li {
+background: #c50;
+height: 26px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu ul ul ul li a {
+height: 26px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu ul ul ul li:hover {
+background: #e70;
+height: 26px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu ul ul ul li a:hover {
+background: #e70;
+height: 20px;
+padding: 3px 0 0 0;
+margin: 0;
+}
+
+#adminmenu li:hover > ul {
+visibility: visible;
+}
+
+div#admin-content-container{
+ /*   padding-top: 4ex; */
+}
+
+#admin_menu {
+float: left;
+}
+
+#adminmenu_logout {
+width: 98px; 
+float: left;
+}
+
+#admin_menu_logout {
+text-align: center;
+}
+
+/* END ADMINMENU */
+
+
+
+/* CMSIMPLE PRINT */
+
+.cmsimplecore_printinfo {background: #fff; font-family: courier new, monospace; font-size: 14px; color: #000; border-bottom: 1px solid #222; margin-bottom: 16px;}
+
+.cmsimplecore_print a:link {color: #368; text-decoration: none; font-style: normal;}
+.cmsimplecore_print a:visited {color: #368; text-decoration: none; font-style: normal;}
+.cmsimplecore_print a:hover {color: #c60; text-decoration: none;}
+.cmsimplecore_print a:active {color: #c60; text-decoration: none;}
+.cmsimplecore_print a:focus {color: #c60; text-decoration: none;}
+
+/* END CMSIMPLE PRINT */
+
+
+
+/* CMSIMPLE FRONTEND */
+
+.cmsimpleLocatorElement {
+white-space: nowrap;
+}
+
+/* END CMSIMPLE FRONTEND */
+
+
+
+/* PLUGINMANAGER */
+
+div#cmsimple_pm {
+font-family: arial, sans-serif;
+font-size: 15px;
+color: #333;
+border: 0;
+padding: 12px 0;
+margin: 0;
+}
+
+div#cmsimple_pm table {
+width: 100%;
+max-width: 700px;
+border-collapse: collapse;
+padding: 0;
+margin: 0;
+}
+
+div#cmsimple_pm tr:hover {
+background: #d0d0c6;
+}
+
+div#cmsimple_pm label:hover {
+color: #c60;
+text-decoration: underline;
+}
+
+div#cmsimple_pm th {
+border-bottom: 1px dotted #666;
+padding: 5px 8px 8px 0;
+vertical-align: top;
+}
+
+div#cmsimple_pm td {
+border-bottom: 1px dotted #666;
+padding: 5px 8px 5px 0;
+vertical-align: top;
+}
+
+div#cmsimple_pm a:link {color: #369; text-decoration: none;}
+div#cmsimple_pm a:visited {color: #369; text-decoration: none;}
+div#cmsimple_pm a:hover {color: #c60; text-decoration: underline;}
+div#cmsimple_pm a:active {color: #c60; text-decoration: underline;}
+div#cmsimple_pm a:focus {color: #c60; text-decoration: underline;}
+
+/* END PLUGINMANAGER */
+
+
+
+/* SYSINFO */
+
+table.sysinfo {border-top: 1px dotted #666; border-collapse: collapse;}
+table.sysinfo td {vertical-align: top; border-bottom: 1px dotted #666; padding: 5px 24px 5px 0;}
+table.sysinfo tr:hover {background: #d0d0c6;}
+
+#update_message {float: left; background: #fff; color: #444; font-family: arial, sans-serif; font-size: 14px; border: 2px solid #acaca3; padding: 5px 9px; margin: 9px 0 0 0;}
+
+#update_message a:link {color: #369; text-decoration: none;}
+#update_message a:visited {color: #369; text-decoration: none;}
+#update_message a:hover {color: #c60; text-decoration: underline;}
+#update_message a:active {color: #c60; text-decoration: underline;}
+#update_message a:focus {color: #c60; text-decoration: underline;}
+
+/* END SYSINFO */
+
+
+
+/* META_TAGS */
+
+#meta_tags hr {
+	margin:6px 0;
+	visibility:hidden;
+}
+
+/* END META_TAGS */
+
+
+
+/* PAGE_PARAMS */
+
+#page_params hr {
+	margin:8px 0;
+}
+
+/* END PAGE_PARAMS */
+
+
+
+/* PAGEMANAGER */
+
+/* Treeview */
+
+#pagemanager {
+background: #fff;
+color: #333;
+border: 1px solid #999;
+padding: 16px;
+margin: 1px 0;
+}
+
+#pagemanager ul {
+padding: 0;
+margin: 0;
+background: none;
+}
+
+#pagemanager ul ul {
+padding: 4px 0 0 0;
+margin: 0;
+background: none;
+}
+
+#pagemanager ul ul ul {
+padding: 6px 0 0 0;
+margin: 0;
+background: none;
+}
+
+/* <h1> */
+#pagemanager ul li {
+background: none;
+font-family: arial, sans-serif;
+font-weight: 700;
+font-size: 15px;
+border: 0px solid #aaa;
+padding: 2px 0;
+margin: 6px 0px 3px 0;
+list-style-image: none;
+width: 230px;
+}
+
+/* <h2> */
+#pagemanager ul ul li {
+background: none;
+font-size: 15px;
+font-weight: 400;
+border: 0px solid #999;
+padding: 2px 0;
+margin: 6px 0px 3px 19px;
+}
+
+/* <h3> */
+#pagemanager ul ul ul li {
+background: none;
+font-size: 14px;
+border: 0px solid #666;
+padding: 3px 0;
+margin: 1px 0px 1px 19px;
+}
+
+#pagemanager ul ul ul li a {
+color: #444;
+}
+
+/* Toolbar */
+
+div#pagemanager-toolbar {
+margin: 1px 0;
+border: 1px solid #999;
+background-color: #eee;
+padding: 0 8px;
+font-size: 14px;
+}
+
+div#pagemanager-toolbar a:focus {
+background: none;
+}
+
+/* horizontal toolbar */
+ 
+/* for floating horizontal toolbar: uncomment the following */
+
+/*
+div#pagemanager-toolbar.horizontal {
+    position: fixed;
+    top: 150px;
+    z-index: 1000;
+}
+*/
+
+div#pagemanager-toolbar.horizontal img {
+margin: 8px 0;
+}
+
+div#pagemanager-toolbar.horizontal img.tool {
+margin: 6px 2px;
+}
+
+div#pagemanager-toolbar.horizontal img.separator {
+margin: 0 0 5px 0;
+}
+
+/* Context menu */
+
+/* To have enough space for the whole context menu, if the template has a small footer */
+div#pagemanager-footer {
+height: 150px;
+}
+
+div#vakata-contextmenu {
+width: 400px; 
+text-align: left; 
+padding: 9px 0;
+font-family: arial; 
+font-size: 14px;
+/* the following line will open the context menu further to the right */
+/* margin-left: 100px; */
+}
+
+div#vakata-contextmenu.jstree-cmsimple-context li.vakata-separator,
+div#vakata-contextmenu.jstree-classic-context li.vakata-separator,
+div#vakata-contextmenu.jstree-default-context li.vakata-separator,
+div#vakata-contextmenu.jstree-apple-context li.vakata-separator {
+margin: 5px 0;
+}
+
+div#vakata-contextmenu ul {
+width: 100%;
+}
+
+div#vakata-contextmenu li ins {
+margin: 0 10px 0 6px;
+}
+
+/* END PAGEMANAGER */
+
+
+
+/* FILEBROWSER */
+
+#CMSimpleFileBrowser, #CMSimpleFileBrowserMenu {
+background: #fff;
+color: #333;
+line-height: 1.6em;
+border: 1px solid #999;
+margin: 6px 2px 6px 0;
+overflow: auto;
+padding: 8px 16px 20px 16px;
+font-family: arial, sans-serif;
+font-size: 14px;
+}
+
+#CMSimpleFileBrowserMenu {
+font-weight: 700;
+}
+
+
+/* FILEBROWSER MENU */
+
+#CMSimpleFileBrowser {
+font-family: arial, sans-serif;
+font-size: 14px;
+}
+
+#CMSimpleFileBrowser  fieldset, #CMSimpleFileBrowserMenu  fieldset {
+margin: 5px;
+display:none;
+}
+
+
+/* filebrowser lists */
+
+.xhfbform legend a {color: #c00!important;}
+
+span.xhfb_files {
+font-weight: 700;
+color: #900;
+}
+
+p.xhfb_files {
+font-weight: 700;
+padding: 0;
+}
+
+#CMSimpleFileBrowser ul li.folder input, #CMSimpleFileBrowser li.odd input, #CMSimpleFileBrowser li.even input {
+background: transparent!important;
+border: 0!important;
+}
+
+#CMSimpleFileBrowser .submit {
+width: 10em;
+}
+
+#CMSimpleFileBrowser ul, #CMSimpleFileBrowserMenu ul {
+list-style-image: none;
+list-style-position:inside;
+padding: 0;
+margin: auto;
+}
+
+#CMSimpleFileBrowser ul.unseen, #CMSimpleFileBrowserMenu ul.unseen{
+display: none;
+}
+
+#CMSimpleFileBrowser li.openFolder, #CMSimpleFileBrowserMenu li.openFolder {
+list-style-image:url(icons/folder-open.png);
+padding: 2px 0 0 5px;
+margin: 0 0 0 0;
+line-height: 18px;
+font-size: 14px; 
+font-weight: 700;
+}
+
+#CMSimpleFileBrowser li.folder, #CMSimpleFileBrowserMenu li.folder{
+list-style-image:url(icons/folder.png);
+padding: 2px 0 0 5px;
+margin: 0 0 0 0;
+line-height: 18px;
+font-size: 13px; 
+font-weight: 400;
+}
+
+#CMSimpleFileBrowser li.openFolder ul, #CMSimpleFileBrowserMenu li.openFolder ul {margin-left: 20px;}
+
+
+/* filebrowser folders */
+
+#CMSimpleFileBrowser #folders {
+float: left;
+overflow: auto;
+}
+
+#CMSimpleFileBrowser div#subfolders {
+padding: 0 0 10px 0;
+}
+
+#CMSimpleFileBrowser div#subfolders li {
+font-size: 13px;
+font-weight: 700;
+}
+
+
+/* filebrowser files */
+
+#CMSimpleFileBrowser a:link {color: #257; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowser a:visited {color: #257; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowser a:hover {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowser a:active {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowser a:focus {color: #c60; text-decoration: none;}
+
+#CMSimpleFileBrowser li.openFolder a:link {color: #920; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowser li.openFolder a:visited {color: #920; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowser li.openFolder a:hover {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowser li.openFolder a:active {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowser li.openFolder a:focus {color: #c60; text-decoration: none;}
+
+#CMSimpleFileBrowser li.folder a:link {color: #257; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowser li.folder a:visited {color: #257; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowser li.folder a:hover {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowser li.folder a:active {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowser li.folder a:focus {color: #c60; text-decoration: none;}
+
+#CMSimpleFileBrowserMenu a:link {color: #257; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowserMenu a:visited {color: #257; text-decoration: none; font-style: normal;}
+#CMSimpleFileBrowserMenu a:hover {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowserMenu a:active {color: #c60; text-decoration: none;}
+#CMSimpleFileBrowserMenu a:focus {color: #c60; text-decoration: none;}
+
+
+/* files - for new filebrowser 2013-11 */
+
+#CMSimpleFileBrowser div#files {}
+
+#CMSimpleFileBrowser div#files ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+#CMSimpleFileBrowser div#files li {
+list-style-type: none;
+min-width: 126px;
+text-align: left;
+background: #e6e9ec;
+float: left;
+font-size: 13px;
+border: 1px solid #c0c3c6;
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+#CMSimpleFileBrowser #files li:hover {
+background: #d6d9dc!important;
+}
+
+a.xhfbfile span, #CMSimpleFileBrowser #files ul li a.xhfbfile span {
+display: block;
+text-align: center;
+float: right;
+border: 0;
+padding: 0;
+margin: 0;
+}
+
+#files a span {
+display: block;
+float: left!important;
+clear: both!important;
+overflow: hidden;
+padding: 0!important;
+margin: 6px auto 0 auto!important;
+}
+
+li.fb_file {
+float:left!important;
+width: 350px!important;
+height: 20px;
+background: none!important;
+text-align: left;
+font-size: 14px!important;
+border: 0!important; 
+border-bottom: 2px solid #d6d9dc!important;
+padding: 8px 6px 5px 6px!important;
+}
+
+li.fb_file:hover {
+background: #d6d9dc!important;
+overflow: visible!important;
+}
+
+li.fb_file img {
+clear: both;
+float: right;
+max-width: 200px;
+border: 1px solid #666;
+margin: 3px 0!important;
+}
+
+.fb_filedata {
+font-size: 12px;
+}
+
+span.filebrowser_image {
+width: 100%;
+display: block!important;
+text-align: center!important;
+}
+
+span.filebrowser_image img {
+border: 1px solid #666;
+margin: 0 auto;
+}
+
+div.fb_dummy {
+background: #b0b9bc; 
+float: left; 
+width: 92%; 
+font-family: courier new, monospace!important;
+text-align: center; 
+font-size: 20px!important; 
+font-weight: 700!important; 
+padding: 0!important; 
+margin: 6px 0 0 0!important; 
+border: 1px solid #b0b9bc;
+}
+
+
+/* END FILEBROWSER */
+
+
+
+/* PLUGINLOADER */
+
+div.pluginerror {
+font-family: arial, sans-serif;
+font-size: 14px;
+text-align: center;
+border: 3px solid #000;
+background-color: #fc0;
+color: #000;
+padding: 4px 6px;
+margin: 6px 0 0 0;
+}
+
+textarea.plugininput {
+width: 96%;
+height: 18px;
+font-family: arial, sans-serif;
+font-size: 14px;
+background: #fff;
+color: #555;
+border: 1px solid #ccc;
+padding: 4px;
+}
+
+textarea.plugininputmax {
+width: 96%;
+height: 82px;
+font-family: arial, sans-serif;
+font-size: 14px;
+background: #fff;
+color: #555;
+border: 1px solid #ccc;
+padding: 4px;
+}
+
+textarea.plugintextarea {
+width: 96%;
+height: 410px;
+background: #fff;
+font-family: 'courier new', serif;
+font-size: 14px;
+color: #333;
+padding: 10px;
+margin: 0;
+}
+
+div.pluginedit,div.plugintext {
+border: 0px solid #828177;
+padding: 4px 0;
+}
+
+form.plugineditform {
+
+}
+
+div.plugineditcaption {
+font-family: arial, sans-serif;
+font-size: 15px;
+font-weight: bold;
+padding: 6px 0;
+}
+
+table.pluginedittable {
+width: 100%;
+border: 0;
+}
+
+table.pluginedittable td {
+border: 0px solid #828177;
+padding: 4px 4px 4px 4px;
+vertical-align: top;
+font-size: 14px;
+font-family: arial, sans-serif;
+}
+
+.pluginedittable td.plugincfcap,pluginedittable td.plugincfhint {
+font-size: 15px;
+border-top: 1px solid #ccc;
+padding-top: 6px;
+}
+
+.pluginedittable td.plugincfcap {
+font-weight: bold;
+}
+
+table.pluginedittable td.plugincf {
+
+}
+
+td.plugincf {
+width: 250px;
+}
+
+
+/*
+Tooltips, if hint-texts are used within a plugin 
+e.g.: $plugin_tx['PluginName']['cf_var_name']='hint';
+Will display a span, when hovering var_name.
+*/
+.pl_tooltip {
+font-family: arial, sans-serif;
+font-size: 14px;
+}
+
+a.pl_tooltip,
+a.pl_tooltip:link,
+a.pl_tooltip:visited,
+a.pl_tooltip:active {
+position: relative;
+text-decoration: none;
+font-weight: normal;
+border: 0;
+}
+
+a.pl_tooltip:hover {
+/* IE needs some change for the a:hover	to handle the a:hover span */
+background-color: transparent;
+}
+
+a.pl_tooltip span {
+display: none;
+}
+
+a.pl_tooltip span p {
+width: auto !important;
+}
+
+a.pl_tooltip:hover span {
+display: block;
+position: absolute;
+top: 15px;
+left: 15px;
+width: 360px;
+z-index: 10;
+border: 1px dotted;
+padding: 2px 10px 2px 10px;
+background: #EEEEEE;
+color: #333;
+text-align: left;
+}
+a.pl_tooltip img {
+border: 0;
+}
+
+img.helpicon {background: none;}
+
+/* END PLUGINLOADER */
+
+
+
+/* CMSimple BACKEND */
+
+input.cmsimplecore_settings {
+width: 96%;
+font-size: 14px;
+color: #333;
+padding: 2px 3px;
+margin: 3px 0;
+border: 1px solid #ccc;
+background: #fff;
+}
+
+textarea.cmsimplecore_settings {
+width: 96%;
+height: 96px;
+font-size: 14px;
+color: #333;
+padding: 2px 3px;
+margin: 3px 0;
+border: 1px solid #ccc;
+background: #fff;
+}
+
+textarea.cmsimplecore_settings_short {
+height: 56px;
+}
+
+/* PLUGIN MENÜ */
+
+table.edit {
+background: #333!important;
+color: #999!important; 
+font-size: 14px!important; 
+line-height: 1.2em!important; 
+border: 2px solid #999!important; 
+margin: 1px 0!important; 
+border-collapse: collapse!important;
+}
+
+table.edit td {
+color: #999!important;
+text-align: center!important; 
+border: 1px solid #999!important; 
+padding: 9px 6px!important;
+border-collapse: collapse!important;
+}
+
+table.edit td a:link {color: #ccc!important; text-decoration: none;}
+table.edit td a:visited {color: #ccc!important; text-decoration: none;}
+table.edit td a:hover {color: #f90!important; text-decoration: underline;}
+table.edit td a:active {color: #fff!important; text-decoration: underline;}
+table.edit td a:focus {color: #fff!important; text-decoration: underline;}
+
+.cmsimplecore_version {
+font-family: arial, sans-serif; 
+font-size: 14px; 
+padding: 0 2px;
+}
+
+/* Info and Help link, Notices and Warnings */
+
+.cmsimplecore_debug {
+height: 18px;
+background: #900; 
+font-family: arial, sans-serif; 
+font-size: 14px; 
+line-height: 14px;
+color: #fff; 
+text-align: center; 
+border: 0px solid #000; 
+padding: 2px 6px; 
+margin: auto;
+}
+
+.cmsimplecore_warning {
+background: #fc0; 
+font-family: arial, sans-serif; 
+font-size: 14px; 
+color: #000; 
+border: 3px solid #000; 
+padding: 4px 6px; 
+margin: 4px 0;
+}
+
+.cmsimplecore_message {
+background: #080; 
+font-family: arial, sans-serif; 
+font-size: 15px; 
+color: #fff; 
+text-align: center; 
+border: 3px solid #fff; 
+padding: 4px 6px; 
+margin: 4px 0;
+}
+
+/* LINKFORMATIERUNG / LINKS for warnings */
+
+.cmsimplecore_warning a:link {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #36a !important; 
+text-decoration: none !important; 
+font-style: normal !important;
+}
+
+.cmsimplecore_warning a:visited {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #36a !important; 
+text-decoration: none !important; 
+font-style: normal !important;
+}
+
+.cmsimplecore_warning a:hover {
+font-family: arial, sans-serif !important; 
+font-size: 14px; color: #fff !important; 
+text-decoration: none !important; 
+background-color: #359 !important; 
+font-style: normal !important;
+}
+
+.cmsimplecore_warning a:active {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #fff !important; 
+text-decoration: none !important; 
+background-color: #666 !important; 
+font-style: normal !important;
+}
+
+.cmsimplecore_warning a:focus {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #fff !important; 
+text-decoration: none !important; 
+background-color: #666 !important; 
+font-style: normal !important;
+}
+
+
+/* file edit textareas */
+
+textarea.cmsimplecore_file_edit {
+width: 96%; 
+height: 410px; 
+background: #fff;
+color: #333;
+font-family: 'courier new', monospace;
+font-size: 14px;
+padding: 10px;
+margin: 0;
+}
+
+
+/* MAILFORM */
+
+#cmsimple_mailform div {
+width: 250px; 
+margin: 0 0 8px 0;
+}
+
+#cmsimple_mailform input.text {
+width: 90%; 
+}
+
+span.captcha_code {
+display: block; 
+float:left; 
+color: #fff; 
+text-decoration: none; 
+background-color: #000; 
+padding: 1px 5px 2px 5px; 
+margin: 0 4px;
+}
+
+.text, .captchainput {
+font-family: arial, sans-serif;
+font-size: 14px;
+color: #444;
+padding: 2px 4px;
+margin: 0 0 2px 0;
+}
+
+.captchainput  {
+float: left;
+width:6ex;
+border: 1px solid #666;
+margin: 0 0 10px 0;
+}
+
+.cmsimpleform_backlink {
+font-weight: 700; 
+text-align: center;
+}
+
+
+/* the rest */
+
+textarea.cmsimple-editor {
+background: #fff;
+color: #333;
+font-family: courier new, monospace!important;
+font-size: 15px;
+}
+
+.cmsimplecore_center {
+text-align: center;
+}
+
+.flag {border: 0;}
+
+span.highlight_search {
+background: #fd0;
+color: #000;
+}
+
+.cmsimplecore_maintenance {
+background: #fff;
+color: #333;
+text-align: center;
+font-family: arial, sans-serif;
+border: 3px solid #c60;
+padding: 10px 30px;
+}
+
+
+/* LINKFORMATIERUNG / LINKS for backend */
+
+/*
+.edit a:link, #cmsimplecore_pluginselect a:link {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #36a !important; 
+text-decoration: none !important; 
+font-style: normal !important;
+}
+
+.edit a:visited, #cmsimplecore_pluginselect a:visited {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #36a !important; 
+text-decoration: none !important; 
+font-style: normal !important;
+}
+
+.edit a:hover, #cmsimplecore_pluginselect a:hover {
+font-family: arial, sans-serif !important; 
+font-size: 14px; color: #fff !important; 
+text-decoration: none !important; 
+background-color: #666 !important; 
+font-style: normal !important;
+}
+
+.edit a:active, #cmsimplecore_pluginselect a:active {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #fff !important; 
+text-decoration: none !important; 
+background-color: #666 !important; 
+font-style: normal !important;
+}
+
+.edit a:focus, #cmsimplecore_pluginselect a:focus {
+font-family: arial, sans-serif !important; 
+font-size: 14px !important; 
+color: #fff !important; 
+text-decoration: none !important; 
+background-color: #666 !important; 
+font-style: normal !important;
+}
+ */
+ 
+#cmsimple_legal_notice {
+background: #666; 
+color: #aaa; 
+font-family: arial, sans-serif; 
+font-size: 12px; 
+text-align: right; 
+padding: 2px 10px; 
+margin: 60px 0 0 0;
+}
+
+#cmsimple_legal_notice a:link {color: #ccc;}
+#cmsimple_legal_notice a:visited {color: #ccc;}
+#cmsimple_legal_notice a:hover {color: #f90;}
