@@ -1,1 +1,0 @@
-cf push APPNAME -b php_buildpack –p CMSimple_4-6-3.zip -m 256mb
