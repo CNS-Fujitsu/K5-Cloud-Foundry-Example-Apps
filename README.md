@@ -8,6 +8,7 @@ Follow the installation instructions [here](https://github.com/cloudfoundry/cli#
 #### Set API endpoint
 ```cf api <Insert CF API URL>```
 #### Login
+API endpoint: api.uk-1.paas-cf.cloud.global.fujitsu.com  
 ```cf login -u USERNAME@ORGNAME  -p PASSWORD -o ORGNAME -s SPACENAME```
 
 #### List running apps
