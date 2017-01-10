@@ -1,53 +1,93 @@
  <html>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
-  
-            function uploadPicture()
-            {
-                //Prepare form data
-                var formData = new FormData();
-                formData.append("file", $("#inputFileToLoad")[0].files[0]);
-                //formData.append("url", "http://i.telegraph.co.uk/multimedia/archive/02007/Plate-1_2007614b.jpg"); //url of remote image
-                formData.append("language", "eng");
-                formData.append("apikey", "09ef6e2d6888957");
-                callService(formData);                     
-            }
-            
-            function callService(formData)
-            {
-                //Send OCR Parsing request asynchronously
-                jQuery.ajax({
-                    url: "https://api.ocr.space/parse/image",
-                    data: formData,
-                    dataType: 'json',
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    type: 'POST',
-                    success: function (ocrParsedResult) {
-                        //Get the parsed results, exit code and error message and details
-                        console.log("Success!");
-                        var parsedResults = ocrParsedResult["ParsedResults"];
-                        var ocrExitCode = ocrParsedResult["OCRExitCode"];
-                        var isErroredOnProcessing = ocrParsedResult["IsErroredOnProcessing"];
-                        var errorMessage = ocrParsedResult["ErrorMessage"];
-                        var errorDetails = ocrParsedResult["ErrorDetails"];
-                        //If we have got parsed results, then loop over the results to do something
-                        if (parsedResults != null) {
-                            //Uncomment these lines if parsing multiple results
-                            $.each(parsedResults, function (index, value) {
-                                var exitCode = value["FileParseExitCode"];
-                                var parsedText = value["ParsedText"];
-                                var errorMessage = value["ParsedTextFileName"];
-                                var errorDetails = value["ErrorDetails"];
-                                
-                                console.log("OCR: " + parsedText);
-                                $("#text").html( parsedText);
-                            });
-                        }
-                    }
-                });   
-            }            
+function uploadPicture(dataURL)
+{
+//Prepare form data
+var formData = new FormData
+    ();
+//formData.append
+//   ("file", fileToUpload);
+    
+//formData.append("url",
+//     "URL-of-Image-or-PDF-file");
+formData.append("base64Image",
+    dataURL);
+formData.append("language"
+    , "eng");
+formData.append("apikey"
+    , "09ef6e2d6888957");
+
+formData.append("isOverlayRequired", "True");
+
+//Send OCR Parsing request asynchronously
+jQuery.ajax({
+
+url: "https://api.ocr.space/parse/image",
+type: 'POST',
+data: formData,
+//dataType: 'form/multipart',
+dataType: 'json',
+cache: false,
+contentType: false,
+processData: false,
+//type: 'json',
+success: function (ocrParsedResult) {
+//Get the parsed results, exit code and error message and details
+var parsedResults = ocrParsedResult["ParsedResults"];
+var ocrExitCode = ocrParsedResult["OCRExitCode"];
+var isErroredOnProcessing = ocrParsedResult["IsErroredOnProcessing"];
+var errorMessage = ocrParsedResult["ErrorMessage"];
+var errorDetails = ocrParsedResult["ErrorDetails"];
+
+var processingTimeInMilliseconds = ocrParsedResult["ProcessingTimeInMilliseconds"];
+
+//If we have got parsed results, then loop over the results to do something
+if (parsedResults!= null) {
+//Loop through the parsed results
+$.each(parsedResults, function (index, value) {
+var exitCode = value["FileParseExitCode"];
+var parsedText = value["ParsedText"];
+var errorMessage = value["ParsedTextFileName"];
+var errorDetails = value["ErrorDetails"];
+console.log(exitCode);
+console.log(errorMessage)
+console.log(errorDetails)
+var textOverlay = value["TextOverlay"];
+
+var pageText = '';
+switch (+exitCode) {
+case 1:
+pageText = parsedText;
+break;
+case 0:
+case -10:
+case -20:
+case -30:
+case -99:
+default:
+pageText += "Error: " + errorMessage;
+break;
+}
+
+$.each(textOverlay["Lines"], function (index, value) {
+    var exitCode = value["FileParseExitCode"];
+    var parsedText = value["ParsedText"];
+    var errorMessage = value["ParsedTextFileName"];
+    var errorDetails = value["ErrorDetails"];
+    console.log(errorMessage);
+    console.log(errorDetails);
+    console.log("OCR: " + parsedText);
+    $("#text").html( parsedText);
+});
+
+
+});
+}
+}
+});
+}
+
 </script>
     <script type="text/javascript">
     var canvas, ctx, flag = false,
@@ -58,11 +98,13 @@
         dot_flag = false;
 
     var x = "black",
-        y = 2;
+        y = 4;
     
     function init() {
         canvas = document.getElementById('can');
         ctx = canvas.getContext("2d");
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         w = canvas.width;
         h = canvas.height;
     
@@ -128,10 +170,13 @@
     }
     
     function save() {
-        document.getElementById("canvasimg").style.border = "2px solid";
+        document.getElementById("canvasimg").style.border = "6px solid";
         var dataURL = canvas.toDataURL();
+        //var dataURL = canvas.toDataURL('image/jpeg', 0.5);
+        uploadPicture(dataURL)
         document.getElementById("canvasimg").src = dataURL;
         document.getElementById("canvasimg").style.display = "inline";
+        
     }
     
     function findxy(res, e) {
@@ -181,13 +226,13 @@
         <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
 
           <p>Select a File to Load:</p>
-    <input id="inputFileToLoad" type="file" onchange="loadImageFileAsURL();" />
+    <!--input id="inputFileToLoad" type="file" onchange="loadImageFileAsURL();" />
     <p>File Contents as DataURL:</p>
     <textarea id="textAreaFileContents" style="width:640;height:240"></textarea>
     <p>OCR</p>
     <input type="submit" onclick="uploadPicture();" value="OCR" />
-    <div id="text"></div>
+    <div id="text"></div-->
 
-    
+
     </body>
     </html>
